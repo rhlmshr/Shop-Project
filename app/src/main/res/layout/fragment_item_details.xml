@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.details.ItemDetailsFragment"
+    tools:ignore="ContentDescription">
+
+    <ImageView
+        android:id="@+id/iv_thumb"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/main_bg_yellow_curved"
+        android:transitionName="@string/transition_thumb"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/candy_nbust"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumb"
+        app:layout_constraintTop_toTopOf="@+id/iv_thumb"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/ic_close_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="@string/lorem"
+        android:textColor="@android:color/background_dark"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/iv_thumb"
+        tools:layout_editor_absoluteX="20dp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_read_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/read_more"
+        android:textAllCaps="true"
+        android:textColor="@color/color_green"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_thumbs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:clipToPadding="false"
+        android:layoutAnimation="@anim/details_layout_anim"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tv_read_more"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_view_thumbs" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="100dp" />
+
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/main_bg_green_curved"
+        android:transitionName="@string/transition_download"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_download_close_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        tools:background="@drawable/main_bg_sec_green_curved" />
+
+    <ProgressBar
+        android:id="@+id/pb_download"
+        style="@style/MyProgressBarTwo"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_download"
+        app:layout_constraintEnd_toEndOf="@+id/iv_download"
+        app:layout_constraintStart_toStartOf="@+id/iv_download"
+        app:layout_constraintTop_toTopOf="@+id/iv_download"
+        tools:progress="60" />
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/iv_download"
+        app:layout_constraintEnd_toEndOf="@+id/iv_download"
+        app:layout_constraintStart_toStartOf="@+id/iv_download"
+        app:layout_constraintTop_toTopOf="@+id/iv_download"
+        tools:text="Download\n30 Mb" />
+
+    <ImageView
+        android:id="@+id/iv_download_close_bg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="25dp"
+        android:src="@drawable/drawable_yellow_oval"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_download"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_download" />
+
+    <ImageView
+        android:id="@+id/iv_download_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/asl_pathmorph_crosstick"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_download_close_bg"
+        app:layout_constraintEnd_toEndOf="@+id/iv_download_close_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_download_close_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_download_close_bg" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grp_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_download,pb_download,tv_download" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:alpha="0"
+        android:background="@drawable/main_bg_blue_curved"
+        android:translationY="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_download_close_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/tv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/play"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_play"
+        app:layout_constraintEnd_toEndOf="@id/iv_play"
+        app:layout_constraintStart_toStartOf="@id/iv_play"
+        app:layout_constraintTop_toTopOf="@id/iv_play" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

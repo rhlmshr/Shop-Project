@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_white_bg</item>
+        <item name="colorPrimaryDark">@color/color_white_bg</item>
+        <item name="colorAccent">@color/color_white_bg</item>
+    </style>
+
+    <style name="TitleStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MyProgressBarTwo" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/drawable_progress_bar</item>
+        <item name="android:minWidth">200dp</item>
+    </style>
+
+    <style name="ReviewSheetDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/itemsListFragment">
+
+    <fragment
+        android:id="@+id/itemsListFragment"
+        android:name="com.concept.shop.ui.ItemsListFragment"
+        android:label="fragment_items_list"
+        tools:layout="@layout/fragment_items_list">
+        <action
+            android:id="@+id/action_itemsListFragment_to_itemDetailsFragment2"
+            app:destination="@id/itemDetailsFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDetailsFragment2"
+        android:name="com.concept.shop.ui.details.ItemDetailsFragment"
+        android:label="fragment_item_details"
+        tools:layout="@layout/fragment_item_details" >
+        <action
+            android:id="@+id/action_itemDetailsFragment2_to_itemPlayReviewSheetFragment2"
+            app:destination="@id/itemPlayReviewSheetFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/itemPlayReviewSheetFragment"
+        android:name="com.concept.shop.ui.details.ItemPlayReviewSheetFragment"
+        android:label="fragment_item_play_review_sheet"
+        tools:layout="@layout/fragment_item_play_review_sheet" />
+
+</navigation>

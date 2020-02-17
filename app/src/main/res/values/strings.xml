@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Shop Concept</string>
+
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="transition_download">transition download</string>
+    <string name="transition_thumb">transition thumb</string>
+    <string name="play">Play</string>
+    <string name="read_more">Read More</string>
+    <string name="candy_nbust">CANDY BUST</string>
+    <string name="next">Next</string>
+    <string name="_5">5</string>
+    <string name="_10">10</string>
+    <string name="_15">15</string>
+    <string name="wallet_balance">Wallet Balance:</string>
+    <string name="ready_to_play">Ready to play?</string>
+    <string name="oswald">Oswald</string>
+    <string name="confirm">Confirm</string>
+</resources>
